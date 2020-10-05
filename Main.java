@@ -1,8 +1,10 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
+import src.Dollar;
 
-class Tests{
 
+
+public class Main{
 @Test
 public void testMultiplication() {
    Dollar five = new Dollar(5);
@@ -11,9 +13,14 @@ public void testMultiplication() {
 }
 
 @Test
-public void testEquality() {
+public static void testEquality() {
    assertTrue(new Dollar(5).equals(new Dollar(5)));
    assertFalse(new Dollar(5).equals(new Dollar(6)));
 }
+
+  public static void main(String arg[]) {
+    System.out.println("hello world");
+    testEquality();
+  }
 
 }
