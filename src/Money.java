@@ -1,7 +1,7 @@
 package src;
 public class Money  {
    protected int amount;
-    protected String currency;
+   protected String currency;
    
 
    public boolean equals(Object object) {
@@ -9,7 +9,7 @@ public class Money  {
       return amount == money.amount && currency().equals(money.currency());
    }
 
-   Money times(int multiplier) {
+   public Money times(int multiplier) {
       return new Money(amount * multiplier, currency);
    } 
 
@@ -20,8 +20,6 @@ public class Money  {
    public static Money franc(int amount) {
       return new Money(amount, "CHF");
     }
-
-   public abstract String currency();
 
     public String currency() {
       return currency;
