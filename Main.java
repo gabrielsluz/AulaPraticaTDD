@@ -30,6 +30,11 @@ public static void testFrancMultiplication() {
    assertEquals(Money.franc(15), five.times(3));
 }
 
+@Test
+public static void testCurrency() {
+   assertEquals("USD", Money.dollar(1).currency());
+   assertEquals("CHF", Money.franc(1).currency());
+}
 
 
   public static void main(String arg[]) {
